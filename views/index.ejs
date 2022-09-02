@@ -4,11 +4,30 @@
     <!-- <main> -->
         <div class="container">
             <div class="row main">
-            <h1>Home</h1>
-            <p>The mission of CapacityBay Inc is simple: build the capacity of U.S veterans, transitioning service members, New Americans, immigrants, refugees as well as others living in areas or substantial unemployment and technology deprived communities such as sub-Sahara Africa and other parts of the world.</p>
-             
+                <h1>Home</h1>
+                <p>The mission of CapacityBay Inc is simple: build the capacity of U.S veterans, transitioning service members, New Americans, immigrants, refugees as well as others living in areas or substantial unemployment and technology deprived communities such as sub-Sahara Africa and other parts of the world.</p><br><br><br>
+
+                <% for(let i = 0; i < postM.length; i++){ %>
+                    <h3><%= postM[i].postTitle %></h3>
+                    <p><%= postM[i].postBody.substring(0, 100) + "..." %> 
+                    <a href="/postM/<%= postM[i]._id%>" style="color:blue;">Read More</a>
+                    <form action="/delete" method="post">
+                        <button type="submit" name="delete" value="<%= postM[i]._id %>">delete</button>
+                    </form><br>
+                    </p>
+                    
+
+                <%}%>
+
+                <br>
+                <br>
+                <br>
+              <br><br><%- include('compose') %>
             </div>
+            
         </div>
+
+     
         
 
         

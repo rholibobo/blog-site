@@ -3,10 +3,9 @@
     padding: 0;
     box-sizing: content-box;
 }
-body{
-    height: 100vh;
-}
+
 .main{
+    
     width: 60%;
     margin: 50px auto;
 }
@@ -23,7 +22,6 @@ body{
 
 .nav-bar .header{
     width: 30%;
-    ;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,17 +40,14 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 0;
+    
 }
 span{
     color: red;
     font-size: 30px;
 }
 @media screen and (max-width: 425px) {
-    body{
-            
-    }
+   
      .nav-bar{
         width: 100%;
 
