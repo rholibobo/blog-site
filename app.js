@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -13,7 +14,9 @@ app.use(express.static('public'));
 const port = 3000;
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://rholipop:Umohontop97@cluster0.szik61r.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect(process.env.MONGODBCLOUD);
+
+console.log(process.env.MONGODBCLOUD)
 
 
 const blogSchema = new mongoose.Schema({
