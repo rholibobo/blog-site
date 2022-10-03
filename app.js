@@ -13,7 +13,7 @@ app.use(express.static('public'));
 const port = 3000;
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://0.0.0.0:27017/blogDB');
+mongoose.connect('mongodb+srv://rholipop:Umohontop97@cluster0.szik61r.mongodb.net/?retryWrites=true&w=majority');
 
 
 const blogSchema = new mongoose.Schema({
@@ -24,30 +24,7 @@ const blogSchema = new mongoose.Schema({
 // Collection
 const Blog = mongoose.model('blog', blogSchema);
 
-// const blog = new Blog({
-//      postTitle: 'Zildjian',
-//      postBody: 'Hello'
 
-//     });
-
-// Fruit.insertMany([blog], (err, result)=>{})
-
-// blog.save().then(() => console.log('meow'));
-
-// Blog.find({}, (err, response)=>{
-//     Blog.forEach((item)=>{
-//         console.log("Done")
-//     })
-// })
-
-
-
-
-// const db = [
-//     {postTitle: "Assignment 29 30",
-//      postBody: "What a life"   
-//     }
-// ];
 
 app.get('/', (req, res)=>{
     Blog.find({}, (err, response)=>{
@@ -70,16 +47,7 @@ app.get('/compose', (req, res)=>{
 })
 
 
-// app.get(`/postM/:postItem`, function (req, res, next) {
 
-//    let route = req.params.id;
-    
-//     console.log(`${route}`);
-    
-//     res.send(`${route}`);
-    
-//     next();
-// })
 
 app.post('/compose', (req, res)=>{
     // const post = {
@@ -100,10 +68,7 @@ app.post('/compose', (req, res)=>{
 })
 
 app.post('/delete', (req, res)=>{
-    // const deleteItem = req.body.delete;
-    // if(deleteItem === ""){
-    //     console.log('clicked')
-    // }
+    
     console.log(req.body)
     Blog.findOneAndRemove({_id: req.body.delete}, (err, response)=>{
         res.redirect('/');
