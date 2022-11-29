@@ -11,10 +11,10 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
-const port = 3000;
+const port = 3200;
 
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODBCLOUD);
+mongoose.connect("mongodb://0.0.0.0:27017/blogDB");
 
 console.log(process.env.MONGODBCLOUD)
 
@@ -74,12 +74,12 @@ app.post('/delete', (req, res)=>{
     
     console.log(req.body)
     Blog.findOneAndRemove({_id: req.body.delete}, (err, response)=>{
+        console.log("Removed User : ", response);
         res.redirect('/');
     })
 })
 
 app.get('/postM/:postItem', (req, res)=> {
-    
     
     Blog.find({_id: req.params.postItem}, (err, response)=>{
         console.log(req.params) 
