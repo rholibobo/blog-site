@@ -1,10 +1,18 @@
-<form action="/compose" method="post">
+<%- include('../templates/header.ejs') %>
+<%- include('../templates/nav.ejs') %>
 
-    <label for="title" style="font-weight: bolder;">Title</label><br>
-    <input type="text" id="title" size="70" required autofocus name="postTitle" value=""><br><br>
+<main class="main">
+    <form action="/compose" method="post">
 
-    <label for="txt" style="font-weight: bolder;">Body</label><br>
-    <textarea name="postBody" id="txt" cols="70" rows="10" name="postBody"></textarea><br><br>
+        <label for="title" style="font-weight: bolder;">Title</label><br>
+        <input type="text" id="title" size="70" required autofocus name="postTitle" value=""><br><br>
 
-    <button type="submit">Publish</button>
-</form>
+        <label for="txt" style="font-weight: bolder;">Body</label><br>
+        <textarea name="postBody" id="txt" cols="70" rows="10" name="postBody"></textarea><br><br>
+
+        <button type="submit">Publish</button>
+    </form>
+</main>
+
+
+<%- include('../templates/footer.ejs') %> 

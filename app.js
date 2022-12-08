@@ -16,7 +16,6 @@ const port = 3200;
 const mongoose = require('mongoose');
 mongoose.connect("mongodb://0.0.0.0:27017/blogDB");
 
-console.log(process.env.MONGODBCLOUD)
 
 
 const blogSchema = new mongoose.Schema({
@@ -46,18 +45,12 @@ app.get('/contact', (req, res)=>{
 
 app.get('/compose', (req, res)=>{
     res.render('compose')
-    res.redirect('/')
 })
 
 
 
 
 app.post('/compose', (req, res)=>{
-    // const post = {
-    //     postTitle: req.body.postTitle,
-    //     postBody: req.body.postBody,
-    //     title: req.body.postTitle
-    // }
     const newTitle = req.body.postTitle;
     const newBody = req.body.postBody;
 

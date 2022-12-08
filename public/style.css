@@ -1,40 +1,51 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
 }
 
-.main{
-    
-    width: 60%;
+.main {
+    /* background-color: blue; */
+    width: 70%;
     margin: 50px auto;
+    height: 60vh;
+    
 }
 
-.nav-bar{
+.nav-bar {
     background-color: rgb(240, 247, 247);
     width: 100%;
     height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+
 }
 
-.nav-bar .header{
-    width: 30%;
+.nav-bar .header {
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-   
+
+
 }
 
-a{
+.home-click {
+    text-decoration: none;
+    color: black;
+    padding: 1.1em;
+    background-color: aqua;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+a {
     text-decoration: none;
     color: black;
 }
 
-footer{
+footer {
     width: 100%;
     height: 50px;
     background-color: aqua;
@@ -42,82 +53,133 @@ footer{
     justify-content: center;
     align-items: center;
     
+
 }
-span{
+
+span {
     color: red;
     font-size: 30px;
 }
-@media screen and (max-width: 425px) {
-   
-     .nav-bar{
-        width: 100%;
+
+main form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#mySidebar,
+#main {
+    display: none;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:580px) {
+    .nav-bar{
+        justify-content: space-between;
+    }
+    .nav-bar .header {
+        display: none;
+    }
+
+    #mySidebar,
+    #main {
+        display: block;
+    }
+
+    /* The sidebar menu */
+    .sidebar {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Stay on top */
+        top: 0;
+        left: 0;
+        /* background-color: #111; Black */
+        background-color: rgb(22, 213, 213);
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidebar */
+    }
+
+    /* The sidebar links */
+    .sidebar a {
+        padding: 0.4em;
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: black;
+        display: block;
+        transition: 0.3s;
+        padding-left: 1rem;
+        border-bottom: 2px solid rgb(13, 13, 13);
 
     }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        border: none;
+    }
+
+    /* The button used to open the sidebar */
+    .openbtn {
+        font-size: 30px;
+        cursor: pointer;
+        color: black;
+        border: none;
+    }
+
+    .openbtn:hover {
+        background-color: #444;
+    }
+
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    #main {
+        transition: margin-left .5s;
+        /* If you want a transition effect */
+        padding: 20px;
+    }
+
+    .sidebar .box_font i {
+        /* width: 12%; */
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .sidebar .box_font span {
+        /* width: 12%; */
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .sidebar a img {
+        width: 20%;
+        border: none;
+        padding-left: 1rem;
+    }
+
     .main{
-    
-        width: 80%;
-        padding: 5px 15px;
+        width: 90%;
+        height: 100vh;
         
     }
-    .main h1{
-        font-size: 20px;
+    footer{
+        padding-bottom: 50px;
     }
-    .nav-bar .header{
-    
-     width: 50%;
-     font-size: 14px;
- }
- h1{
-     font-size: 16px;
- }
-    
-}
-@media screen and (max-width: 375px) {
-   body{
-       width: 100%;
-   }
-    .nav-bar{
-       width: 100%;
-   }
-   .main{
-       width: 80%;
-       padding: 5px 10px;
-       
-   }
-   .main h1{
-       font-size: 20px;
-   }
-   .nav-bar .header{
-    
-    width: 50%;
-    font-size: 10px;
-}
-h1{
-    font-size: 16px;
-}
-}
-@media screen and (max-width: 320px) {
-    body{
-        width: 100%;
-    }
-     .nav-bar{
-        width: 100%;
-    }
-    .main{
-        width: 80%;
-        padding: 5px 10px;
-        
-    }
-    .main h1{
-        font-size: 20px;
-    }
-    .nav-bar .header{
-     
-     width: 50%;
-     font-size: 10px;
- }
- h1{
-     font-size: 16px;
- }
-     
+
 }

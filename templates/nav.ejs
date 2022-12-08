@@ -1,14 +1,5 @@
-<!-- <nav class="navbar">
-    <div class="daily">
-        <h1>Daily Journal</h1>
-    </div>
-    
-    <div class="header">
-        <h3><a href="/">Home</a></h3>
-        <h3><a href="/about">About Us</a> </h3>
-        <h3><a href="/contact">Contact Us</a> </h3>
-    </div>
-</nav> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <nav class="navbar bg-light">
     <div class="container-fluid nav-bar">
@@ -20,7 +11,30 @@
             <h3><a href="/">Home</a></h3>
             <h3><a href="/about">About Us</a> </h3>
             <h3><a href="/contact">Contact Us</a> </h3>
+            
+        </div>
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/">Home</a><br>
+            <a href="/about">About Us</a><br>
+            <a href="/contact">Contact Us</a><br>
+        </div>
+        <div id="main">
+            <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
         </div>
       
     </div>
   </nav>
+<script>
+    function openNav() {
+    document.getElementById("mySidebar").style.width = "300px";
+    document.getElementById("main").style.marginLeft = "100px";
+  }
+  
+  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  }
+</script>
