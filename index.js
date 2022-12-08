@@ -14,7 +14,7 @@ app.use(express.static('public'));
 const port = 3200;
 
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODBCLOUD);
+mongoose.connect("mongodb://localhost:27017/blogDB");
 
 
 
