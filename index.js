@@ -15,7 +15,7 @@ const port = 3200;
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODBCLOUD || "mongodb://localhost:27017/blogDB");
-
+console.log(process.env.MONGODBCLOUD)
 
 
 const blogSchema = new mongoose.Schema({
