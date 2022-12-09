@@ -1,14 +1,14 @@
 <%- include('../templates/header.ejs') %>
 <%- include('../templates/nav.ejs') %>
 
-<main class="main">
+<main class="main compose">
     <form action="/compose" method="post">
 
         <label for="title" style="font-weight: bolder;">Title</label><br>
-        <input type="text" id="title" size="70" required autofocus name="postTitle" value=""><br><br>
+        <input type="text" id="title" size="" required autofocus name="postTitle" value=""><br><br>
 
         <label for="txt" style="font-weight: bolder;">Body</label><br>
-        <textarea name="postBody" id="txt" cols="70" rows="10" name="postBody"></textarea><br><br>
+        <textarea name="postBody" id="txt" cols="30" rows="10" name="postBody"></textarea><br><br>
 
         <button type="submit">Publish</button>
     </form>

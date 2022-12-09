@@ -64,9 +64,15 @@ span {
     font-size: 30px;
 }
 
-main form {
-    width: 50%;
-    margin: 0 auto;
+.main form input{
+    width: 100%;
+    outline: none;
+    padding: 0.6em;
+}
+.main form textarea{
+    width: 100%;
+    outline: none;
+    padding: 0.6em;
 }
 
 #mySidebar,
@@ -183,6 +189,11 @@ main form {
     }
     footer{
         padding-bottom: 50px;
+    }
+    .main form {
+        width: 90%;
+        margin: 0 ;
+        
     }
 
 }
