@@ -11,7 +11,7 @@
     /* background-color: blue; */
     width: 70%;
     margin: 50px auto;
-    height: 60vh;
+    /* height: 60vh; */
     
 }
 
@@ -73,6 +73,24 @@ span {
     width: 100%;
     outline: none;
     padding: 0.6em;
+}
+.text-upload{
+    padding-bottom: 30px;
+}
+.text-upload .upload{
+    width: 80%;
+    /* height: 20vh; */
+    background-color: rgb(239, 229, 229);
+    /* border: 1px solid aqua; */
+    border-radius: 10px;
+    padding: 10px;
+}
+.upload form button{
+    padding: 0.5em;
+    border:none ;
+    border-radius: 10px;
+    background-color: red;
+    
 }
 
 #mySidebar,
@@ -184,7 +202,7 @@ span {
 
     .main{
         width: 90%;
-        height: 100vh;
+        /* height: 100vh; */
         
     }
     footer{
