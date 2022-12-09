@@ -65,7 +65,7 @@ app.post('/compose', (req, res)=>{
 
 app.post('/delete', (req, res)=>{
     
-    console.log(req.body)
+    // console.log(req.body)
     Blog.findOneAndRemove({_id: req.body.delete}, (err, response)=>{
         console.log("Removed User : ", response);
         res.redirect('/');
